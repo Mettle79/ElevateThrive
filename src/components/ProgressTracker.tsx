@@ -33,7 +33,7 @@ export function ProgressTracker({ currentTask = 1, showTimer = true }: ProgressT
   }, [])
 
   return (
-    <Card className="border-[#3C1053] bg-[#1E1E1E] text-white shadow-lg">
+    <Card className="border-orange-700 bg-[#1E1E1E] text-white shadow-lg">
       <CardContent className="p-3">
         <div className="flex items-center gap-2 text-white">
           <Clock className="h-4 w-4" />

@@ -228,8 +228,8 @@ function RansomwareChallengeContent() {
 
   if (!isLoggedIn) {
     return (
-      <div className="flex flex-1 items-center justify-center p-4 text-white bg-gradient-to-b from-[#3C1053] to-[#121212]">
-        <Card className="w-full max-w-md bg-[#1E1E1E] text-white border-[#3C1053]">
+      <div className="flex flex-1 items-center justify-center p-4 text-white bg-gradient-to-b from-orange-700 to-[#121212]">
+        <Card className="w-full max-w-md bg-[#1E1E1E] text-white border-orange-700">
           <CardContent className="p-6">
             <div className="mb-6 flex justify-center">
               <Lock className="h-12 w-12 text-white" />
@@ -244,7 +244,7 @@ function RansomwareChallengeContent() {
                 placeholder="Enter password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="bg-[#121212] border-[#3C1053] text-white placeholder:text-white/50"
+                className="bg-[#121212] border-orange-700 text-white placeholder:text-white/50"
               />
               {error && (
                 <div className="flex items-center gap-2 text-[#E3526A]">
@@ -252,7 +252,7 @@ function RansomwareChallengeContent() {
                   <span className="text-sm">Incorrect password</span>
                 </div>
               )}
-              <Button type="submit" className="w-full bg-[#BE99E6] hover:bg-[#BE99E6]/80 text-[#3C1053]">
+              <Button type="submit" className="w-full bg-orange-400 hover:bg-orange-400/80 text-orange-900">
                 Access Server
               </Button>
             </form>
@@ -264,8 +264,8 @@ function RansomwareChallengeContent() {
 
   if (isTransitioning) {
     return (
-      <div className="flex flex-1 items-center justify-center p-4 text-white bg-gradient-to-b from-[#3C1053] to-[#121212]">
-        <Card className="w-full max-w-md bg-[#1E1E1E] text-white border-[#3C1053]">
+      <div className="flex flex-1 items-center justify-center p-4 text-white bg-gradient-to-b from-orange-700 to-[#121212]">
+        <Card className="w-full max-w-md bg-[#1E1E1E] text-white border-orange-700">
           <CardContent className="p-6">
             <div className="mb-6 flex flex-col items-center justify-center gap-4">
               <Server className="h-24 w-24 text-white animate-pulse" />
@@ -282,8 +282,8 @@ function RansomwareChallengeContent() {
 
   if (isDecrypted) {
     return (
-      <div className="flex flex-1 items-center justify-center p-4 text-white bg-gradient-to-b from-[#3C1053] to-[#121212]">
-        <Card className="w-full max-w-2xl bg-[#1E1E1E] text-white border-[#3C1053]">
+      <div className="flex flex-1 items-center justify-center p-4 text-white bg-gradient-to-b from-orange-700 to-[#121212]">
+        <Card className="w-full max-w-2xl bg-[#1E1E1E] text-white border-orange-700">
           <CardContent className="p-6">
             <div className="mb-6 flex justify-center">
               <Shield className="h-12 w-12 text-white" />
@@ -302,7 +302,7 @@ function RansomwareChallengeContent() {
 
             <div className="flex justify-center">
               <Link href={`/leaderboard?scrollTo=${encodeURIComponent(sessionStorage.getItem("playerName") || "")}`}>
-                <Button className="bg-[#BE99E6] hover:bg-[#BE99E6]/80 text-[#3C1053]">
+                <Button className="bg-orange-400 hover:bg-orange-400/80 text-orange-900">
                   View My Position on Leaderboard
                 </Button>
               </Link>
@@ -383,12 +383,12 @@ function RansomwareChallengeContent() {
   }
 
   return (
-    <div className="relative flex flex-1 flex-col bg-gradient-to-b from-[#3C1053] to-[#121212] p-4 text-white">
+    <div className="relative flex flex-1 flex-col bg-gradient-to-b from-orange-700 to-[#121212] p-4 text-white">
       <div className="absolute top-4 right-4 z-10">
         <ProgressTracker currentTask={8} />
       </div>
       <div className="mx-auto w-full max-w-4xl">
-        <Card className="border-[#3C1053] bg-[#1E1E1E]">
+        <Card className="border-orange-700 bg-[#1E1E1E]">
           <CardContent className="p-6">
             <div className="mb-6 flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -399,7 +399,7 @@ function RansomwareChallengeContent() {
                 <Button
                   variant="outline"
                   onClick={() => setShowLogFile(true)}
-                  className="bg-[#121212] text-white border-[#3C1053] hover:bg-[#3C1053]/20"
+                  className="bg-[#121212] text-white border-orange-700 hover:bg-orange-700/20"
                 >
                   <FileText className="mr-2 h-4 w-4" />
                   Log File
@@ -407,7 +407,7 @@ function RansomwareChallengeContent() {
                 <Button
                   variant="outline"
                   onClick={() => setShowKeys(true)}
-                  className="bg-[#121212] text-white border-[#3C1053] hover:bg-[#3C1053]/20"
+                  className="bg-[#121212] text-white border-orange-700 hover:bg-orange-700/20"
                 >
                   <Key className="mr-2 h-4 w-4" />
                   Encryption Keys
@@ -415,13 +415,13 @@ function RansomwareChallengeContent() {
               </div>
             </div>
 
-            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-[#3C1053] bg-[#121212]">
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-orange-700 bg-[#121212]">
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
                 <Server className="h-24 w-24 text-[#E3526A]" />
                 <div className="text-center text-white/80">
                   <p className="text-lg font-semibold text-white">Our server has been encrypted by hijackers!</p>
                   <p className="mt-2 text-sm">They are holding our data to ransom. How can we recover our system?</p>
-                  <div className="mt-4 p-3 bg-[#121212]/50 border border-[#3C1053]/30 rounded-lg">
+                  <div className="mt-4 p-3 bg-[#121212]/50 border border-orange-700/30 rounded-lg">
                     <p className="text-sm text-white/90 font-medium mb-2">🔍 Investigation Instructions:</p>
                     <p className="text-xs text-white/80">Look for clues as to what was used to encrypt the server and search for what could be used to decrypt the server. Check the system logs and encryption key matrix for vital information.</p>
                   </div>
@@ -435,7 +435,7 @@ function RansomwareChallengeContent() {
                 placeholder="Enter decryption key"
                 value={decryptionKey}
                 onChange={(e) => setDecryptionKey(e.target.value)}
-                className="bg-[#121212] border-[#3C1053] text-white placeholder:text-white/50"
+                className="bg-[#121212] border-orange-700 text-white placeholder:text-white/50"
               />
               {error && (
                 <div className="flex items-center gap-2 text-[#E3526A]">
@@ -446,7 +446,7 @@ function RansomwareChallengeContent() {
               <div className="flex gap-2">
                 <Button
                   onClick={handleDecrypt}
-                  className="flex-1 bg-[#BE99E6] hover:bg-[#BE99E6]/80 text-[#3C1053]"
+                  className="flex-1 bg-orange-400 hover:bg-orange-400/80 text-orange-900"
                   disabled={!decryptionKey}
                 >
                   Decrypt Drive
@@ -454,7 +454,7 @@ function RansomwareChallengeContent() {
                 {!showHint ? (
                   <Button
                     variant="outline"
-                    className="bg-[#121212] text-white border-[#3C1053] hover:bg-[#3C1053]/20"
+                    className="bg-[#121212] text-white border-orange-700 hover:bg-orange-700/20"
                     disabled
                   >
                     Hint ({timeRemaining}s)
@@ -463,7 +463,7 @@ function RansomwareChallengeContent() {
                   <Button
                     variant="outline"
                     onClick={() => setShowLogFile(true)}
-                    className="bg-[#121212] text-white border-[#3C1053] hover:bg-[#3C1053]/20"
+                    className="bg-[#121212] text-white border-orange-700 hover:bg-orange-700/20"
                   >
                     <Lightbulb className="mr-2 h-4 w-4" />
                     Get Hint
@@ -474,7 +474,7 @@ function RansomwareChallengeContent() {
 
             {showLogFile && (
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-                <Card className="w-full max-w-2xl border-[#3C1053] bg-[#1E1E1E]">
+                <Card className="w-full max-w-2xl border-orange-700 bg-[#1E1E1E]">
                   <CardContent className="p-6">
                     <div className="mb-4 flex items-center justify-between">
                       <h2 className="text-xl font-bold text-white">System Log File</h2>
@@ -495,7 +495,7 @@ function RansomwareChallengeContent() {
                       </pre>
                     </div>
                     {showHint && (
-                      <div className="mt-4 rounded border border-[#3C1053]/50 bg-[#121212] p-4">
+                      <div className="mt-4 rounded border border-orange-700/50 bg-[#121212] p-4">
                         <div className="flex items-center gap-2 text-white/80">
                           <Lightbulb className="h-5 w-5" />
                           <span className="font-bold text-white">Hint:</span>
@@ -510,7 +510,7 @@ function RansomwareChallengeContent() {
 
             {showKeys && (
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-                <Card className="w-full max-w-2xl border-[#3C1053] bg-[#1E1E1E]">
+                <Card className="w-full max-w-2xl border-orange-700 bg-[#1E1E1E]">
                   <CardContent className="p-6">
                     <div className="mb-4 flex items-center justify-between">
                       <h2 className="text-xl font-bold text-white">Encryption Keys Matrix</h2>
@@ -529,7 +529,7 @@ function RansomwareChallengeContent() {
                           row.map((position, colIndex) => (
                             <div 
                               key={`${rowIndex}-${colIndex}`} 
-                              className="rounded border border-[#3C1053]/50 p-2 text-center"
+                              className="rounded border border-orange-700/50 p-2 text-center"
                             >
                               <div className="font-bold text-white">{position}</div>
                               {keyValues[position] && (
@@ -554,10 +554,10 @@ function RansomwareChallengeContent() {
 export default function RansomwareChallenge() {
   return (
     <Suspense fallback={
-      <div className="flex flex-1 items-center justify-center p-4 text-white bg-gradient-to-b from-[#3C1053] to-[#121212]">
+      <div className="flex flex-1 items-center justify-center p-4 text-white bg-gradient-to-b from-orange-700 to-[#121212]">
         <div className="text-center">
-          <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4" style={{ color: '#BE99E6' }} />
-          <p style={{ color: '#BE99E6' }}>Loading task...</p>
+          <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4 text-orange-400" />
+          <p className="text-orange-400">Loading task...</p>
         </div>
       </div>
     }>

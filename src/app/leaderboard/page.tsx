@@ -169,7 +169,7 @@ function LeaderboardContent() {
   }
 
   return (
-    <div className="flex flex-1 flex-col bg-gradient-to-b from-[#3C1053] to-[#121212] p-4 text-white">
+    <div className="flex flex-1 flex-col bg-gradient-to-b from-orange-700 to-[#121212] p-4 text-white">
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -177,16 +177,16 @@ function LeaderboardContent() {
             <h1 className="text-3xl font-bold text-white">Leaderboard</h1>
             {isSpectatorMode && (
               <div className="flex items-center gap-2 ml-4">
-                <div className="px-2 py-1 bg-[#E3526A]/20 border border-[#BE99E6]/50 rounded text-[#E3526A] text-xs font-medium">
-                  Spectator Mode
-                </div>
+                      <div className="px-2 py-1 bg-[#E3526A]/20 border border-orange-400/50 rounded text-[#E3526A] text-xs font-medium">
+                        Spectator Mode
+                      </div>
                 <div className="flex items-center gap-2">
                   <input
                     type="checkbox"
                     id="autoRefresh"
                     checked={autoRefresh}
                     onChange={(e) => setAutoRefresh(e.target.checked)}
-                    className="w-4 h-4 text-[#E3526A] bg-[#121212] border-[#3C1053] rounded focus:ring-[#BE99E6]"
+                    className="w-4 h-4 text-[#E3526A] bg-[#121212] border-orange-700 rounded focus:ring-orange-400"
                   />
                   <label htmlFor="autoRefresh" className="text-[#E3526A] text-sm">
                     Auto-refresh
@@ -200,7 +200,7 @@ function LeaderboardContent() {
               variant="outline"
               onClick={loadLeaderboard}
               disabled={loading}
-              className="bg-[#121212] text-white border-[#3C1053] hover:bg-[#3C1053]/20"
+              className="bg-[#121212] text-white border-orange-700 hover:bg-orange-700/20"
             >
               {loading ? (
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -214,7 +214,7 @@ function LeaderboardContent() {
         </div>
 
         {currentPlayerEntry && !isSpectatorMode && (
-          <Card className="mb-6 border-[#3C1053] bg-[#1E1E1E]">
+          <Card className="mb-6 border-orange-700 bg-[#1E1E1E]">
             <CardContent className="p-6">
               <h2 className="mb-4 text-xl font-bold text-white">Your Score Submitted!</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -241,14 +241,14 @@ function LeaderboardContent() {
 
         <div className="grid gap-6">
           {loading ? (
-            <Card className="border-[#3C1053] bg-[#1E1E1E]">
+            <Card className="border-orange-700 bg-[#1E1E1E]">
               <CardContent className="p-8 text-center">
                 <Loader2 className="mx-auto mb-4 h-8 w-8 animate-spin text-white" />
                 <p className="text-white/80">Loading leaderboard...</p>
               </CardContent>
             </Card>
           ) : leaderboard.length === 0 ? (
-            <Card className="border-[#3C1053] bg-[#1E1E1E]">
+            <Card className="border-orange-700 bg-[#1E1E1E]">
               <CardContent className="p-8 text-center">
                 <Trophy className="mx-auto mb-4 h-16 w-16 text-white/50" />
                 <h2 className="mb-2 text-xl font-bold text-white">No Scores Yet</h2>
@@ -287,9 +287,9 @@ function LeaderboardContent() {
                       <div className="space-y-3">
                         {/* Top 3 completed entries with full cards */}
                         {currentCompletedEntries.slice(0, 3).map((entry, index) => (
-                          <Card key={entry.id} className={`border-[#3C1053] bg-[#1E1E1E] ${
+                          <Card key={entry.id} className={`border-orange-700 bg-[#1E1E1E] ${
                             highlightedPlayer === entry.player_name 
-                              ? 'ring-2 ring-[#BE99E6] ring-opacity-75 animate-pulse' 
+                              ? 'ring-2 ring-orange-400 ring-opacity-75 animate-pulse' 
                               : ''
                           }`}>
                             <CardContent className="py-3 px-4">
@@ -318,9 +318,9 @@ function LeaderboardContent() {
 
                         {/* Remaining completed entries with compact cards */}
                         {currentCompletedEntries.slice(3).map((entry, index) => (
-                          <Card key={entry.id} className={`border-[#3C1053] bg-[#1E1E1E] ${
+                          <Card key={entry.id} className={`border-orange-700 bg-[#1E1E1E] ${
                             highlightedPlayer === entry.player_name 
-                              ? 'ring-2 ring-[#BE99E6] ring-opacity-75 animate-pulse' 
+                              ? 'ring-2 ring-orange-400 ring-opacity-75 animate-pulse' 
                               : ''
                           }`}>
                             <CardContent className="py-1 px-2">
@@ -366,7 +366,7 @@ function LeaderboardContent() {
                       {currentInProgressEntries.map((entry, index) => (
                         <Card key={entry.id} className={`border-[#E3526A]/50 bg-[#E3526A]/10 ${
                           highlightedPlayer === entry.player_name 
-                            ? 'ring-2 ring-[#BE99E6] ring-opacity-75 animate-pulse' 
+                            ? 'ring-2 ring-orange-400 ring-opacity-75 animate-pulse' 
                             : ''
                         }`}>
                           <CardContent className="py-1 px-2">
@@ -461,7 +461,7 @@ function LeaderboardContent() {
                     variant="outline"
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
-                    className="bg-[#121212] text-white border-[#3C1053] hover:bg-[#3C1053]/20"
+                    className="bg-[#121212] text-white border-orange-700 hover:bg-orange-700/20"
                   >
                     Previous
                   </Button>
@@ -487,8 +487,8 @@ function LeaderboardContent() {
                           onClick={() => handlePageChange(pageNum)}
                           className={
                             currentPage === pageNum
-                              ? "bg-[#BE99E6] hover:bg-[#BE99E6]/80 text-white"
-                              : "bg-[#121212] text-white border-[#3C1053] hover:bg-[#3C1053]/20"
+                              ? "bg-orange-400 hover:bg-orange-400/80 text-orange-900"
+                              : "bg-[#121212] text-white border-orange-700 hover:bg-orange-700/20"
                           }
                         >
                           {pageNum}
@@ -501,7 +501,7 @@ function LeaderboardContent() {
                     variant="outline"
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === Math.ceil(completedEntries.length / entriesPerPage)}
-                    className="bg-[#121212] text-white border-[#3C1053] hover:bg-[#3C1053]/20"
+                    className="bg-[#121212] text-white border-orange-700 hover:bg-orange-700/20"
                   >
                     Next
                   </Button>
@@ -527,10 +527,10 @@ function LeaderboardContent() {
 export default function LeaderboardPage() {
   return (
     <Suspense fallback={
-      <div className="flex flex-1 items-center justify-center bg-gradient-to-b from-[#3C1053] to-[#121212] p-4 text-white">
+      <div className="flex flex-1 items-center justify-center bg-gradient-to-b from-orange-700 to-[#121212] p-4 text-white">
         <div className="text-center">
-          <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4" style={{ color: '#BE99E6' }} />
-          <p style={{ color: '#BE99E6' }}>Loading leaderboard...</p>
+          <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4 text-orange-400" />
+          <p className="text-orange-400">Loading leaderboard...</p>
         </div>
       </div>
     }>

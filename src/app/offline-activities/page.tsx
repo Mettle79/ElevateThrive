@@ -90,12 +90,12 @@ export default function OfflineActivities() {
   const CurrentIcon = briefcaseActivity.icon
 
   return (
-    <div className="relative flex flex-1 flex-col bg-gradient-to-b from-[#3C1053] to-[#121212] p-4 text-white">
+    <div className="relative flex flex-1 flex-col bg-gradient-to-b from-orange-700 to-[#121212] p-4 text-white">
       <div className="absolute top-4 right-4 z-10">
         <ProgressTracker />
       </div>
       <div className="flex flex-1 items-center justify-center">
-        <Card className="w-full max-w-2xl bg-[#1E1E1E] text-white border-[#3C1053]">
+        <Card className="w-full max-w-2xl bg-[#1E1E1E] text-white border-orange-700">
           <CardContent className="p-8">
             <div className="mb-8 flex justify-center">
               <Shield className="h-16 w-16 text-white" />
@@ -113,7 +113,7 @@ export default function OfflineActivities() {
               </h2>
               
               {/* Main Briefcase Activity */}
-              <div className="mb-6 p-6 rounded-lg border-2 border-[#3C1053] bg-[#121212]">
+              <div className="mb-6 p-6 rounded-lg border-2 border-orange-700 bg-[#121212]">
                                  <div className="flex items-center gap-4 mb-4">
                    <briefcaseActivity.icon className={`h-8 w-8 ${briefcaseActivity.color}`} />
                    <div>
@@ -121,7 +121,7 @@ export default function OfflineActivities() {
                      <p className="text-white/80">{briefcaseActivity.description}</p>
                                            <div className="mt-3">
                         <Link href="/task2">
-                          <Button className="bg-[#BE99E6] hover:bg-[#BE99E6]/80 text-[#3C1053] text-sm">
+                          <Button className="bg-orange-400 hover:bg-orange-400/80 text-orange-900 text-sm">
                             ← Return to Task 2 to get the briefcase code
                           </Button>
                         </Link>
@@ -130,13 +130,13 @@ export default function OfflineActivities() {
                  </div>
                 
                 {/* Sub-activities contained within the briefcase */}
-                <div className="ml-12 border-l-2 border-[#3C1053]/30 pl-4">
+                <div className="ml-12 border-l-2 border-orange-700/30 pl-4">
                   <h4 className="text-lg font-semibold text-white mb-3">Activities Inside:</h4>
                   <div className="space-y-3">
                     {subActivities.map((activity) => (
                       <div 
                         key={activity.id}
-                        className="p-3 rounded-lg border border-[#3C1053]/30 bg-[#121212] hover:border-[#3C1053]/60 transition-all"
+                        className="p-3 rounded-lg border border-orange-700/30 bg-[#121212] hover:border-orange-700/60 transition-all"
                       >
                         <div className="flex items-center gap-3">
                           <activity.icon className={`h-5 w-5 ${activity.color}`} />
@@ -147,7 +147,7 @@ export default function OfflineActivities() {
                             {/* Add input field for Decrypting the Code activity */}
                             {activity.id === 2 && (
                               <div className="mt-3 space-y-2">
-                                <div className="p-2 bg-[#121212] rounded border border-[#3C1053]/30">
+                                <div className="p-2 bg-[#121212] rounded border border-orange-700/30">
                                   <p className="text-xs text-white/80 italic">
                                     💡 Hint: Think about a secret message; the answer is a simple phrase about how fun it is to solve!
                                   </p>
@@ -157,7 +157,7 @@ export default function OfflineActivities() {
                                   placeholder="Enter your decryption answer here..."
                                   value={decryptionAnswer}
                                   onChange={(e) => handleDecryptionInput(e.target.value)}
-                                  className="bg-[#121212] border-[#3C1053] text-white placeholder:text-white/50"
+                                  className="bg-[#121212] border-orange-700 text-white placeholder:text-white/50"
                                 />
                                 <div className="flex items-center gap-2">
                                   {isDecryptionComplete ? (
@@ -177,7 +177,7 @@ export default function OfflineActivities() {
                             {/* Add input field for Social Media activity */}
                             {activity.id === 3 && (
                               <div className="mt-3 space-y-2">
-                                <div className="p-2 bg-[#121212] rounded border border-[#3C1053]/30">
+                                <div className="p-2 bg-[#121212] rounded border border-orange-700/30">
                                   <p className="text-xs text-white/80 italic">
                                     💡 Hint: Look at all your photos; which one is relatable to a cyber term?
                                   </p>
@@ -187,7 +187,7 @@ export default function OfflineActivities() {
                                   placeholder="Enter the social media code here..."
                                   value={socialMediaAnswer}
                                   onChange={(e) => handleSocialMediaInput(e.target.value)}
-                                  className="bg-[#121212] border-[#3C1053] text-white placeholder:text-white/50"
+                                  className="bg-[#121212] border-orange-700 text-white placeholder:text-white/50"
                                 />
                                 <div className="flex items-center gap-2">
                                   {isSocialMediaComplete ? (
@@ -207,7 +207,7 @@ export default function OfflineActivities() {
                             {/* Add input field for QR Code Challenge activity */}
                             {activity.id === 4 && (
                               <div className="mt-3 space-y-2">
-                                <div className="p-2 bg-[#121212] rounded border border-[#3C1053]/30">
+                                <div className="p-2 bg-[#121212] rounded border border-orange-700/30">
                                   <p className="text-xs text-white/80 italic">
                                     💡 Hint: All QR codes are unique. The code you need is one you've already used today, but in a different order.
                                   </p>
@@ -217,7 +217,7 @@ export default function OfflineActivities() {
                                   placeholder="Enter the QR code answer here..."
                                   value={qrCodeAnswer}
                                   onChange={(e) => handleQrCodeInput(e.target.value)}
-                                  className="bg-[#121212] border-[#3C1053] text-white placeholder:text-white/50"
+                                  className="bg-[#121212] border-orange-700 text-white placeholder:text-white/50"
                                 />
                                 <div className="flex items-center gap-2">
                                   {isQrCodeComplete ? (
@@ -255,7 +255,7 @@ export default function OfflineActivities() {
                 <Button 
                   className={`${
                     areAllChallengesComplete() 
-                      ? "bg-[#BE99E6] hover:bg-[#BE99E6]/80 text-[#3C1053]" 
+                      ? "bg-orange-400 hover:bg-orange-400/80 text-orange-900" 
                       : "bg-gray-600 text-gray-400 cursor-not-allowed"
                   }`}
                   disabled={!areAllChallengesComplete()}
