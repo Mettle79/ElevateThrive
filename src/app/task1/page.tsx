@@ -120,14 +120,14 @@ export default function PasswordGame() {
   if (success) {
     return (
       <div className="flex flex-1 items-center justify-center p-4 text-white">
-        <Card className="w-full max-w-md bg-[#1E1E1E] text-white border-[#3C1053]">
+        <Card className="w-full max-w-md bg-[#1E1E1E] text-white border-orange-700">
           <CardContent className="p-6">
             <h1 className="mb-6 text-center text-2xl font-bold text-white">Access Granted</h1>
             <p className="mb-6 text-center text-white/80">You have successfully logged in.</p>
 
             <div className="flex justify-center">
               <Link href="/task2">
-                <Button className="bg-[#3C1053] hover:bg-[#3C1053]/80 text-white">Proceed to Task 2</Button>
+                <Button className="bg-orange-700 hover:bg-orange-700/80 text-white">Proceed to Task 2</Button>
               </Link>
             </div>
           </CardContent>
@@ -137,13 +137,13 @@ export default function PasswordGame() {
   }
 
   return (
-    <div className="relative flex flex-1 flex-col bg-gradient-to-b from-[#3C1053] to-[#121212] p-4 text-white">
+    <div className="relative flex flex-1 flex-col bg-gradient-to-b from-orange-700 to-[#121212] p-4 text-white">
       <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-10">
         <ProgressTracker currentTask={1} />
       </div>
       <div className="grid flex-1 gap-6 md:grid-cols-3">
         <div className="col-span-2 flex flex-col">
-          <div className="mb-4 rounded border border-[#3C1053] bg-[#1E1E1E] p-4">
+          <div className="mb-4 rounded border border-orange-700 bg-[#1E1E1E] p-4">
             <div className="mb-4 flex items-center">
               <div className="mr-2 h-3 w-3 rounded-full bg-[#E3526A]"></div>
               <div className="mr-2 h-3 w-3 rounded-full bg-yellow-500"></div>
@@ -163,16 +163,16 @@ export default function PasswordGame() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter password"
-                  className="border-[#3C1053] bg-[#121212] font-mono text-white focus-visible:ring-[#BE99E6] placeholder-white/50"
+                  className="border-orange-700 bg-[#121212] font-mono text-white focus-visible:ring-orange-400 placeholder-white/50"
                 />
               </div>
               {error && <p className="font-mono text-[#E3526A]">Access denied. Incorrect password.</p>}
-              <Button type="submit" className="bg-[#BE99E6] font-mono hover:bg-[#BE99E6]/80 text-[#3C1053]">
+              <Button type="submit" className="bg-orange-400 font-mono hover:bg-orange-400/80 text-orange-900">
                 Submit
               </Button>
             </form>
           </div>
-          <div className="flex-1 rounded border border-[#3C1053] bg-[#1E1E1E] p-4">
+          <div className="flex-1 rounded border border-orange-700 bg-[#1E1E1E] p-4">
             <h2 className="mb-4 font-mono text-xl text-white">Challenge Notes</h2>
             <p className="font-mono text-white/80">
               Check the users personal information for clues for what their password may be.  
@@ -181,7 +181,7 @@ export default function PasswordGame() {
             <div className="mt-4 flex items-center gap-2">
               <Button 
                 variant="outline" 
-                className="bg-[#121212] text-white border-[#3C1053] hover:bg-[#3C1053]/20"
+                className="bg-[#121212] text-white border-orange-700 hover:bg-orange-700/20"
                 onClick={() => setShowHint(true)}
                 disabled={!hintEnabled}
               >
@@ -189,7 +189,7 @@ export default function PasswordGame() {
               </Button>
             </div>
             {showHint && (
-              <div className="mt-4 rounded border border-[#3C1053]/50 bg-[#121212] p-4">
+              <div className="mt-4 rounded border border-orange-700/50 bg-[#121212] p-4">
                 <h3 className="mb-2 font-mono text-lg text-white">Hint:</h3>
                 <ul className="list-disc pl-4 font-mono text-white/80">
                   <li>First letter is capital</li>
@@ -201,15 +201,15 @@ export default function PasswordGame() {
           </div>
         </div>
 
-        <div className="rounded border border-[#3C1053] bg-[#1E1E1E] p-4">
+        <div className="rounded border border-orange-700 bg-[#1E1E1E] p-4">
           <h2 className="mb-4 font-mono text-xl text-white">Non-Restricted User Apps</h2>
           <Tabs defaultValue="photos">
                          <TabsList className="grid w-full grid-cols-2 bg-[#121212]">
-               <TabsTrigger value="photos" className="text-white data-[state=active]:bg-[#BE99E6] data-[state=active]:text-[#3C1053]">
+               <TabsTrigger value="photos" className="text-white data-[state=active]:bg-orange-400 data-[state=active]:text-orange-900">
                  <ImageIcon className="mr-2 h-4 w-4" />
                  Photos
                </TabsTrigger>
-               <TabsTrigger value="calendar" className="text-white data-[state=active]:bg-[#BE99E6] data-[state=active]:text-[#3C1053]">
+               <TabsTrigger value="calendar" className="text-white data-[state=active]:bg-orange-400 data-[state=active]:text-orange-900">
                  <Calendar className="mr-2 h-4 w-4" />
                  Calendar
                </TabsTrigger>
@@ -218,7 +218,7 @@ export default function PasswordGame() {
               <ImageCarousel images={hintImages} />
             </TabsContent>
             <TabsContent value="calendar" className="mt-4">
-              <div className="rounded border border-[#3C1053] p-2">
+              <div className="rounded border border-orange-700 p-2">
                 <div className="mb-2 text-center font-mono text-white">July 2025</div>
                 <div className="grid grid-cols-7 gap-1 text-center text-xs text-white/80">
                   <div>Su</div>
@@ -242,7 +242,7 @@ export default function PasswordGame() {
                   <div className="py-1">4</div>
                   <div className="py-1">5</div>
                   <div className="py-1">6</div>
-                  <div className="rounded bg-[#BE99E6] py-1 cursor-help text-[#3C1053]" title="Lucky number">7</div>
+                  <div className="rounded bg-orange-400 py-1 cursor-help text-orange-900" title="Lucky number">7</div>
                   <div className="py-1">8</div>
 
                   <div className="py-1">9</div>

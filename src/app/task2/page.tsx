@@ -125,7 +125,7 @@ Natwest Thrive`,
   if (success) {
     return (
       <div className="flex flex-1 items-center justify-center p-4 text-white">
-        <Card className="w-full max-w-md bg-[#1E1E1E] text-white border-[#3C1053]">
+        <Card className="w-full max-w-md bg-[#1E1E1E] text-white border-orange-700">
           <CardContent className="p-6">
             <div className="mb-6 flex justify-center">
               <Shield className="h-12 w-12 text-white" />
@@ -137,7 +137,7 @@ Natwest Thrive`,
 
             <div className="flex justify-center">
               <Link href="/task3">
-                <Button className="bg-[#3C1053] hover:bg-[#3C1053]/80 text-white">Proceed to Task 3</Button>
+                <Button className="bg-orange-700 hover:bg-orange-700/80 text-white">Proceed to Task 3</Button>
               </Link>
             </div>
           </CardContent>
@@ -147,12 +147,12 @@ Natwest Thrive`,
   }
 
   return (
-    <div className="relative flex flex-1 flex-col bg-gradient-to-b from-[#3C1053] to-[#121212] p-4 text-white">
+    <div className="relative flex flex-1 flex-col bg-gradient-to-b from-orange-700 to-[#121212] p-4 text-white">
       <div className="absolute top-4 right-4 z-10">
         <ProgressTracker currentTask={2} />
       </div>
       <div className="mx-auto w-full max-w-4xl">
-        <Card className="border-[#3C1053] bg-[#1E1E1E]">
+        <Card className="border-orange-700 bg-[#1E1E1E]">
           <CardContent className="p-6">
             <div className="mb-6">
               <h1 className="text-2xl font-bold text-white mb-2">Email Security Challenge</h1>
@@ -162,7 +162,7 @@ Natwest Thrive`,
               </p>
             </div>
 
-            <div className="mb-6 rounded border border-[#3C1053] bg-[#121212] p-4">
+            <div className="mb-6 rounded border border-orange-700 bg-[#121212] p-4">
               <h2 className="mb-2 font-mono text-lg text-white">Security Tips:</h2>
               <ul className="list-inside list-disc space-y-1 text-sm text-white/80">
                 <li>Check the sender's email address carefully</li>
@@ -176,9 +176,9 @@ Natwest Thrive`,
             <div className="space-y-6">
               <RadioGroup value={selectedEmail} onValueChange={handleSelectionChange}>
                 {emails.map((email) => (
-                  <div key={email.id} className="group rounded border border-[#3C1053] bg-[#121212] p-4">
+                  <div key={email.id} className="group rounded border border-orange-700 bg-[#121212] p-4">
                     <div className="flex items-start space-x-2">
-                      <RadioGroupItem value={email.id} id={`email-${email.id}`} className="border-[#3C1053] mt-1 data-[state=checked]:border-[#BE99E6] data-[state=checked]:bg-[#BE99E6]" />
+                      <RadioGroupItem value={email.id} id={`email-${email.id}`} className="border-orange-700 mt-1 data-[state=checked]:border-orange-400 data-[state=checked]:bg-orange-400" />
                       <Label htmlFor={`email-${email.id}`} className="flex-1 space-y-3 text-white/80">
                         <div className="flex items-center justify-between">
                           <span className="font-mono text-sm">From: {email.from}</span>
@@ -217,7 +217,7 @@ Natwest Thrive`,
 
               <Button 
                 onClick={handleSubmit}
-                className="w-full bg-[#BE99E6] hover:bg-[#BE99E6]/80 text-[#3C1053]"
+                className="w-full bg-orange-400 hover:bg-orange-400/80 text-orange-900"
                 disabled={!selectedEmail}
               >
                 Verify Selection
