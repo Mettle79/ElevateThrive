@@ -41,9 +41,9 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-1 flex-col bg-gradient-to-b from-[#3C1053] to-[#121212] p-4 text-white">
+    <div className="flex flex-1 flex-col bg-gradient-to-b from-orange-700 to-[#121212] p-4 text-white">
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center">
-        <Card className="border-[#3C1053] bg-[#1E1E1E]">
+        <Card className="border-orange-700 bg-[#1E1E1E]">
           <CardContent className="p-8">
             <div className="mb-8 flex justify-center">
               <Image
@@ -67,7 +67,7 @@ export default function Home() {
                     placeholder="Enter PIN"
                     value={pin}
                     onChange={(e) => setPin(e.target.value)}
-                    className="border-[#3C1053] bg-[#121212] text-white placeholder:text-white/70"
+                    className="border-orange-700 bg-[#121212] text-white placeholder:text-white/70"
                   />
                   {error && (
                     <p className="mt-2 text-sm text-[#E3526A]">
@@ -75,7 +75,7 @@ export default function Home() {
                     </p>
                   )}
                 </div>
-                <Button type="submit" className="w-full bg-[#BE99E6] hover:bg-[#BE99E6]/80 text-[#3C1053] font-semibold">
+                <Button type="submit" className="w-full bg-orange-400 hover:bg-orange-400/80 text-orange-900 font-semibold">
                   Begin Challenge
                 </Button>
               </form>

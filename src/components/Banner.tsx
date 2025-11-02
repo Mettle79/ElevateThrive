@@ -16,7 +16,7 @@ export function Banner({ showLeaderboard = false, backgroundColor, showTitle = t
       style={{ backgroundColor: backgroundColor || '#1a1f24' }}
     >
       {showTitle && (
-        <div className="text-[#BE99E6] text-xl font-bold">
+        <div className="text-orange-400 text-xl font-bold">
           Escape Room Challenge
         </div>
       )}
