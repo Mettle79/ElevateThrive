@@ -186,7 +186,7 @@ export default function PasswordChallenge() {
   if (success) {
     return (
       <div className="flex flex-1 items-center justify-center p-4 text-white">
-        <Card className="w-full max-w-2xl bg-[#1E1E1E] text-white border-[#3C1053]">
+        <Card className="w-full max-w-2xl bg-[#1E1E1E] text-white border-orange-700">
           <CardContent className="p-6">
             <div className="mb-6 flex justify-center">
               <Shield className="h-12 w-12 text-white" />
@@ -199,7 +199,7 @@ export default function PasswordChallenge() {
 
             <div className="flex justify-center">
               <Link href="/offline-activities">
-                <Button className="bg-[#3C1053] hover:bg-[#3C1053]/80 text-white">Begin Offline Activities</Button>
+                <Button className="bg-orange-700 hover:bg-orange-700/80 text-white">Begin Offline Activities</Button>
               </Link>
             </div>
           </CardContent>
@@ -209,12 +209,12 @@ export default function PasswordChallenge() {
   }
 
   return (
-    <div className="relative flex flex-1 flex-col bg-gradient-to-b from-[#3C1053] to-[#121212] p-4 text-white">
+    <div className="relative flex flex-1 flex-col bg-gradient-to-b from-orange-700 to-[#121212] p-4 text-white">
       <div className="absolute top-4 right-4 z-10">
         <ProgressTracker currentTask={3} />
       </div>
       <div className="flex flex-1 items-center justify-center">
-        <Card className="w-full max-w-2xl bg-[#1E1E1E] text-white border-[#3C1053]">
+        <Card className="w-full max-w-2xl bg-[#1E1E1E] text-white border-orange-700">
         <CardContent className="p-6">
           <div className="mb-6 flex justify-center">
             <Lock className="h-12 w-12 text-white" />
@@ -222,7 +222,7 @@ export default function PasswordChallenge() {
           <h1 className="mb-6 text-center text-2xl font-bold text-white">Password Strength Estimator</h1>
           
           <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-4 bg-[#121212] rounded-lg border border-[#3C1053]/30">
+            <div className="p-4 bg-[#121212] rounded-lg border border-orange-700/30">
               <h2 className="text-lg font-semibold text-white mb-2">🎯 Your Mission</h2>
               <p className="text-white/80 text-sm">
                 Create a super strong password that would take a hacker at least <span className="text-white font-bold">1 century</span> to figure out if they tried to guess it!
@@ -232,7 +232,7 @@ export default function PasswordChallenge() {
               </p>
             </div>
 
-            <div className="p-4 bg-[#121212] rounded-lg border border-[#3C1053]/30">
+            <div className="p-4 bg-[#121212] rounded-lg border border-orange-700/30">
               <h2 className="text-lg font-semibold text-white mb-2">💡 Quick Tips</h2>
               <ul className="text-white/80 text-sm space-y-1 list-disc list-inside">
                 <li><strong>Length:</strong> Use at least 8 characters</li>
@@ -250,7 +250,7 @@ export default function PasswordChallenge() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={isConfirmed}
-                className="bg-[#121212] border-[#3C1053] text-white placeholder:text-white/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#121212] border-orange-700 text-white placeholder:text-white/50 disabled:opacity-50 disabled:cursor-not-allowed"
               />
               
               <Input
@@ -259,11 +259,11 @@ export default function PasswordChallenge() {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 disabled={isConfirmed}
-                className="bg-[#121212] border-[#3C1053] text-white placeholder:text-white/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#121212] border-orange-700 text-white placeholder:text-white/50 disabled:opacity-50 disabled:cursor-not-allowed"
               />
               
               {passwordsMatch && (
-                <div className="space-y-3 p-3 bg-[#121212] rounded-lg border border-[#3C1053]/30">
+                <div className="space-y-3 p-3 bg-[#121212] rounded-lg border border-orange-700/30">
                   <div className="flex items-center gap-2">
                     <Clock className="h-4 w-4 text-white" />
                     <span className="text-sm text-white/80">Estimated time to crack:</span>
@@ -319,7 +319,7 @@ export default function PasswordChallenge() {
               <Button
                 onClick={handleSubmit}
                 disabled={!meetsRequirement(password) || !passwordsMatch}
-                className="flex-1 bg-[#BE99E6] hover:bg-[#BE99E6]/80 text-[#3C1053] disabled:opacity-50"
+                className="flex-1 bg-orange-400 hover:bg-orange-400/80 text-orange-900 disabled:opacity-50"
               >
                 Complete Challenge
               </Button>
@@ -327,7 +327,7 @@ export default function PasswordChallenge() {
               {isConfirmed && (
                 <Button
                   onClick={handleTryAgain}
-                  className="bg-[#3C1053] hover:bg-[#3C1053]/80 text-white border-[#3C1053]"
+                  className="bg-orange-700 hover:bg-orange-700/80 text-white border-orange-700"
                 >
                   Try Again
                 </Button>
