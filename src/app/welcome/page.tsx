@@ -136,7 +136,7 @@ export default function WelcomePage() {
   }, [playerName])
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-[#3C1053] to-[#121212] text-white p-4">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-orange-700 to-[#121212] text-white p-4">
 
       
       <div className="text-center mb-8">
@@ -148,7 +148,7 @@ export default function WelcomePage() {
 
       {/* Name Input Section */}
       <div className="w-full max-w-md mx-auto mb-8">
-        <div className="bg-[#1E1E1E] border border-[#3C1053] rounded-lg p-6">
+          <div className="bg-[#1E1E1E] border border-orange-700 rounded-lg p-6">
           <label htmlFor="playerName" className="block text-white text-lg font-semibold mb-3 text-center">
             Enter Your Name or Team Name
           </label>
@@ -161,12 +161,12 @@ export default function WelcomePage() {
               placeholder="e.g., John Doe or Team Alpha"
                              className={`w-full px-4 py-3 bg-[#121212] border rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-colors ${
                  nameStatus === 'available' 
-                   ? 'border-[#BE99E6] focus:border-[#BE99E6] focus:ring-[#BE99E6]/20' 
+                   ? 'border-orange-400 focus:border-orange-400 focus:ring-orange-400/20' 
                    : nameStatus === 'taken' 
                    ? 'border-[#E3526A] focus:border-[#E3526A] focus:ring-[#E3526A]/20'
                    : nameStatus === 'checking'
                    ? 'border-yellow-500 focus:border-yellow-400 focus:ring-yellow-400/20'
-                   : 'border-[#3C1053] focus:border-[#BE99E6] focus:ring-[#BE99E6]/20'
+                   : 'border-orange-700 focus:border-orange-400 focus:ring-orange-400/20'
                }`}
               maxLength={50}
             />
@@ -177,7 +177,7 @@ export default function WelcomePage() {
             )}
                          {nameStatus === 'available' && (
                <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                 <div className="text-[#BE99E6] text-lg">✓</div>
+                 <div className="text-orange-400 text-lg">✓</div>
                </div>
              )}
             {nameStatus === 'taken' && (
@@ -208,7 +208,7 @@ export default function WelcomePage() {
         <button
           className={`flex items-center justify-center w-32 h-32 rounded-full border-4 shadow-lg text-white text-5xl font-bold transition-all focus:outline-none focus:ring-4 ${
             playerName.trim() && !isCheckingName && nameStatus === 'available'
-              ? 'bg-[#BE99E6] border-[#BE99E6] hover:scale-105 focus:ring-[#BE99E6] cursor-pointer text-[#3C1053]'
+              ? 'bg-orange-400 border-orange-400 hover:scale-105 focus:ring-orange-400 cursor-pointer text-orange-900'
               : 'bg-[#1E1E1E] border-[#1E1E1E] cursor-not-allowed opacity-50'
           }`}
           onClick={handleStartChallenge}
@@ -237,7 +237,7 @@ export default function WelcomePage() {
       {/* Popup Modal for No Button */}
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50">
-          <div className="bg-[#1E1E1E] text-white rounded-lg p-8 max-w-lg w-full shadow-xl relative border-2 border-[#3C1053]">
+          <div className="bg-[#1E1E1E] text-white rounded-lg p-8 max-w-lg w-full shadow-xl relative border-2 border-orange-700">
             <button
               className="absolute top-2 right-2 text-2xl text-white hover:text-white/80"
               onClick={() => setShowPopup(false)}
