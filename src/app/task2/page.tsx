@@ -81,7 +81,7 @@ Urgent action required!`,
     },
     {
       id: "3",
-      from: "it.support@NatwestThrive.com",
+      from: "it.support@StellarElevate.com",
       subject: "Important Task Information",
       content: `Hello Team,
 
@@ -93,9 +93,9 @@ The code is '062450' and it is important that you do not share or lose it.
 For questions, contact the IT Help Desk at extension 2000 or reply to this email.
 
 Thanks,
-Sarah Chen
+Nicole Jordan
 IT Support Manager
-Natwest Thrive`,
+StellarElevate`,
       suspicious_elements: []
     }
   ]
