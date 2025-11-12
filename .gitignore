@@ -22,6 +22,7 @@
 
 # misc
 .DS_Store
+.tmp.driveupload/
 *.pem
 
 # debug
