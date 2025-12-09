@@ -236,7 +236,7 @@ export default function PasswordChallenge() {
               <h2 className="text-lg font-semibold text-white mb-2">💡 Quick Tips</h2>
               <ul className="text-white/80 text-sm space-y-1 list-disc list-inside">
                 <li><strong>Length:</strong> Use at least 8 characters</li>
-                <li><strong>Variety:</strong> Mix uppercase, lowercase, numbers, symbols</li>
+                <li><strong>Variety:</strong> Mix 2 uppercase letters, 3 lowercase letters, 2 numbers, 1 symbol</li>
                 <li><strong>Symbols:</strong> Most powerful for security</li>
               </ul>
             </div>
