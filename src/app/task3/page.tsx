@@ -18,7 +18,7 @@ export default function PasswordChallenge() {
   const [passwordsMatch, setPasswordsMatch] = useState(false)
   const [isConfirmed, setIsConfirmed] = useState(false)
 
-  // Initialize task tracking
+  // Initialize task tracking.
   useEffect(() => {
     const manager = LeaderboardManager.getInstance()
     manager.startTask(3)
